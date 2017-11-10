@@ -8,16 +8,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= cloudinary_js_config %> <!-- Append this after the main `javascript_include_tag`. -->
   </head>
 
   <body>
   <%= render "layouts/navbar" %>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>

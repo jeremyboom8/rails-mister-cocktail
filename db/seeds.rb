@@ -17,14 +17,3 @@ json = JSON.parse(string)
 json["drinks"].each do |item|
 	Ingredient.create(name: item["strIngredient1"])
 end
-
-i = Ingredient.last
-
-c = Cocktail.create(name:"manhattan")
-
-d = Dose.new(description: "2cl")
-
-d.cocktail = c
-d.ingredient = i
-
-d.save
